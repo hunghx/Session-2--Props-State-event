@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Display from "./components/Display";
+import React, { Component } from "react";
+import Todolist from "./components/Todolist";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    let age = 25;
+    let name = " Nguyễn Văn A";
+    let arr = [1, 3, 5, 7];
+    function displayName(number) {
+      console.log(number);
+      console.log("helo , my name is " + name);
+    }
+    return (
+      <div className="App">
+        <Todolist />
+        {/* <Display name={name} age={age} array={arr} fun={displayName}></Display> */}
+      </div>
+    );
+  }
 }
-
-export default App;
